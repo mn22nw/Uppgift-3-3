@@ -1,19 +1,18 @@
 @charset "UTF-8";
-/* Denna fil får du editera för att lösa uppgiften. Du får INTE ändra i html-filen. */
 
 body {		font-family:verdana, sans-serif;
 			font-size:0.8em;
 			color:#797066; }
 
 h1, h2{		font-family:"Times New Roman", serif;
-			font-size:2.2em;	
-			border:1px solid green;
+			font-size:2.2em;				
 			font-weight:600;
 			line-height:25px;
-			margin-top:15px;}
+			margin-top:10px;}
 #container {	width:600px;
-			margin: 0 auto;}
-#topbar {	width:100%; border:1px solid green;
+			margin: 0 auto;
+			border:1px solid #cecab9;}
+#topbar {	width:100%; 
 			height:218px;
 			background:#51473d;
 			padding-top:3px;
@@ -25,27 +24,29 @@ h1, h2{		font-family:"Times New Roman", serif;
 			font-size:0.85em;
 			color:#FFF;}
 
-#menu {		background:#51473d; border:1px solid blue;
+#menu {		background:#51473d; 
 			width:100%; 
 			height:40px;
+			border-bottom:1px solid #FFF;
 			 }
 			
 #menu a{		display:none; }
 
-#menu ul li a {display:block;
+#menu ul li a:link , #menu ul li a:visited{
+			display:block;
 			color:#eae7d2;
 			text-decoration:none;
 			padding:7px 20px;			
 			border-top:1px solid #847c73;
-
 			}
+#menu ul li a:hover { background:#9c9084;}
 			
 #menu a:first-letter {text-transform: uppercase;}
-
-
 #menu ul {	margin:0 auto;
 			margin-left:-2em; 
-			margin-top:5px;}
+			height:50px;
+			padding-top:9px;
+			 }
 #menu li {	float:left;
 			display:block; 
 			margin-left:2px;
@@ -54,7 +55,12 @@ h1, h2{		font-family:"Times New Roman", serif;
 			
 			}
 
-#menu ul li.active {		background:#eae7d2;}
+#menu ul li.active {			background:#eae7d2; 
+							border-bottom:1px solid #eae7d2;}
+#menu ul li.active a   {		color:#797066;}
+#menu ul li.active a:visited {	color:#797066;}
+#menu ul li.active a:hover {	background:#eae7d2;
+							cursor:default;}
 
 #content {			background:#eae7d2;}
 #maincontent img {	float:left;
@@ -63,13 +69,33 @@ h1, h2{		font-family:"Times New Roman", serif;
 					width:58%; 
 					padding-right:10px;
 					line-height:22px;
-					margin-left:10px;}
+					margin-left:10px;
+					margin-top:30px;
+					border-right:1px dashed #cecab9;}
 #subcontent {		width:35%;
 					float:right;
 					font-size:0.7em;
-					line-height:20px;
+					margin-top:30px;
+					line-height:22px;
 					margin-right:10px;}
-#subcontent h1, h2 {	font-size:1.8em;}
-#bottomcontent {		clear:both;
-					font-style:italic;
-					margin-left:10px;}
+#subcontent h1, h2 {	font-size:1.8em;
+					}
+#subcontent h2{		margin-bottom:-0.8em;
+					margin-top:1.3em;}
+#subcontent li {		list-style-type:none;
+					margin-left:-4.5em;}
+#subcontent a 	{	color:#797066;
+					font-size:1.5em;
+					}
+#subcontent p {		padding-top:8px;}
+#bottomcontent { 	clear:both;
+					height:50px;
+					visibility:hidden;
+					}
+
+#bottomcontent:after {	display:block;
+						content:'\00a9  Högskolan i Kalmar, Institutionen för kommunikation och design';
+						visibility:visible;					
+						font-style:italic;
+						margin-left:10px; 
+						}
